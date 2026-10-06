@@ -37,7 +37,7 @@ function shuffleDraw(names: string[]): Pair[] {
       [receivers[i], receivers[j]] = [receivers[j], receivers[i]];
     }
     if (names.every((n, i) => receivers[i] !== n)) {
-      return names.map((giver, i) => ({ giver, receiver: receivers[i] }));
+      return names.map((giver, i) => ({ giver, receiver: receivers[i]! }));
     }
   }
   // Fallback por rotação
