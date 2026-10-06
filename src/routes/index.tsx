@@ -34,7 +34,7 @@ function shuffleDraw(names: string[]): Pair[] {
     const receivers = [...names];
     for (let i = receivers.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
-      [receivers[i], receivers[j]] = [receivers[j], receivers[i]];
+      [receivers[i], receivers[j]] = [receivers[j]!, receivers[i]!];
     }
     if (names.every((n, i) => receivers[i] !== n)) {
       return names.map((giver, i) => ({ giver, receiver: receivers[i]! }));
