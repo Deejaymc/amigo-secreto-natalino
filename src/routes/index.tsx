@@ -41,7 +41,7 @@ function shuffleDraw(names: string[]): Pair[] {
     }
   }
   // Fallback por rotação
-  return names.map((giver, i) => ({ giver, receiver: names[(i + 1) % names.length] }));
+  return names.map((giver, i) => ({ giver, receiver: names[(i + 1) % names.length]! }));
 }
 
 function Index() {
